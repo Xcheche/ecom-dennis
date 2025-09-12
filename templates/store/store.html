@@ -1,16 +1,100 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block title %}Store{% endblock %}
 
 {% block content %}
 
+{% include 'includes/category_tabs.html' %}
 
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <!-- Show all products -->
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-4  shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 1 (Category 1)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-lg-4  shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 2 (Category 2)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-lg-4  shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 3 (Category 3)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h1>Store</h1>
+    <div class="tab-pane fade" id="cat1" role="tabpanel" aria-labelledby="cat1-tab">
+        <!-- Show only Category 1 products -->
+        <div class="row">
+            <div class="col-lg-4  shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 1 (Category 1)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="tab-pane fade" id="cat2" role="tabpanel" aria-labelledby="cat2-tab">
+        <!-- Show only Category 2 products -->
+        <div class="row">
+            <div class="col-lg-4 shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 2 (Category 2)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
+    <div class="tab-pane fade" id="cat3" role="tabpanel" aria-labelledby="cat3-tab">
+        <!-- Show only Category 3 products -->
+        <div class="row">
+            <div class="col-lg-4 shake-on-hover">
+                <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+                <div class="box-element product">
+                    <h6><strong>Product 3 (Category 3)</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                    <a class="btn btn-outline-success" href="">View</a>
+                    <h1 style="float: right; display: inline-block;">&#x20A6;10.00</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}

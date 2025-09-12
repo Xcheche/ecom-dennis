@@ -1,16 +1,73 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+	<div class="row">
+		<div class="col-lg-6">
+			<!-- Checkout Form -->
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="form-field">
+							<input required class="form-control" type="text" name="name" placeholder="Name.." value="">
+						</div>
+						<div class="form-field">
+							<input required class="form-control" type="email" name="email" placeholder="Email.." value="">
+						</div>
+					</div>
+					
+					<div id="shipping-info">
+						<hr>
+						<p>Shipping Information:</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" name="address" placeholder="Address.." value="">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="city" placeholder="City.." value="">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="state" placeholder="State.." value="">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="zipcode" placeholder="Zip code.." value="">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="country" placeholder="Country.." value="">
+						</div>
+					</div>
 
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+				</form>
+			</div>
 
-<h1>Checkout</h1>
+			<br>
 
+			<!-- Payment Information -->
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+				<div id="paypal-button-container"></div>
+			</div>
+			<!-- End Payment Information -->
+		</div>
 
-
-
-
-
-
-
-
-{% endblock %}
+		<!-- Order Summary -->
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+				<hr>
+				<h3>Order Summary</h3>
+				<hr>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
+					<div style="flex:2"><p>Product Name</p></div>
+					<div style="flex:1"><p>&#x20A6;10.00</p></div>
+					<div style="flex:1"><p>x1</p></div>
+				</div>
+				<h5>Items:   1</h5>
+				<h5>Total:   &#x20A6;10.00</h5>
+			</div>
+		</div>
+		<!-- End Order Summary -->
+	</div>
+{% endblock content %}

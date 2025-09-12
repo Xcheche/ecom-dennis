@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Chekv12</a>
+        <a class="navbar-brand shake-on-hover" href="/">Chekv12</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,20 +10,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link active fw-bold text-warning shake-on-hover" href="/">
+                        <i class="bi bi-house-door-fill me-1 "></i> Home
+                    </a>
                 </li>
             </ul>
 
             <div class="d-flex align-items-center">
-                <!-- Modal Trigger Button -->
-                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#signinModal">
-                    <i class="fas fa-user"></i> Sign In | Sign Up
-                </button>
+              <a   class="btn btn-warning shake-on-hover"  href="">&#x27AB;Login</a>
 
                 <!-- Cart Icon -->
                 <div class="position-relative me-3">
                     <a href="{% url 'cart' %}">
-                        <img id="cart-icon" src="{% static 'images/cart.jpeg' %}" alt="Cart">
+                        <img id="cart-icon" class="shake-on-hover" src="{% static 'images/cart.png' %}" alt="Cart">
                     </a>
                     <span id="cart-total"
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
